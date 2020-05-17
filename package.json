@@ -1,0 +1,15 @@
+{
+  "name": "recoil-logger",
+  "version": "0.1.0",
+  "description": "Logger for recoil state manager",
+  "main": "index.js",
+  "repository": "git@polemius.github.com:polemius/recoil-logger.git",
+  "author": "Ivan Menshykov <ivan.menshykov@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "recoil": "^0.0.7"
+  },
+  "devDependencies": {
+    "clean-publish": "^1.1.7"
+  }
+}
