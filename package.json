@@ -6,10 +6,16 @@
   "repository": "git@polemius.github.com:polemius/recoil-logger.git",
   "author": "Ivan Menshykov <ivan.menshykov@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "recoil": "^0.0.7"
+  "scripts": {
+    "start": "parcel serve --cache-dir test/demo/.cache -d test/demo/dist test/demo/index.html --open"
   },
   "devDependencies": {
-    "clean-publish": "^1.1.7"
+    "@babel/core": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "clean-publish": "^1.1.7",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "recoil": "^0.0.7"
   }
 }

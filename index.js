@@ -12,7 +12,7 @@ const logAction = (action) => {
   if (action.persistence) {
     console.log("%cValue of atom cannot be read", "color: #f00");
     console.log(
-      "%cPlease add: %c`persistence_UNSTABLE: %s` %cto atom object to see the values",
+      "%cPlease add: %c`persistence_UNSTABLE: { type: \"log\" }` %cto atom object to see the values",
       "color: #333",
       "color: #000",
       action.name,
