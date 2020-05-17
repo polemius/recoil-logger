@@ -34,7 +34,7 @@ yarn add --dev recoil-logger
 
 Now you could add `RecoilLogger` to your app:
 
-```js
+```diff
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -58,7 +58,7 @@ After this you can see the events on **each** atom in browser's console:
 
 But to see the values you need to add `persistence_UNSTABLE` key to atom properties:
 
-```js
+```diff
 const counterState = atom({
   key: "count",
   default: 0,
@@ -77,3 +77,13 @@ The key `type` can has any value but not `none` (by default it is `none`).
 This package use unstable hook `useTransactionObservation_UNSTABLE`. 
 As far it will be stable the package will be updated with new API.
 
+## Demo
+
+```
+$ git clone git@github.com:polemius/recoil-logger.git
+$ cd recoil-logger
+$ npm install
+$ npm run start
+```
+
+Please open [localhost:1234](http://localhost:1234)
