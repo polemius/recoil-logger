@@ -14,8 +14,8 @@ import RecoilLogger from 'recoil-logger'
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
-      <App />
       <RecoilLogger />
+      <App />
     </RecoilRoot>
   </React.StrictMode>,
   document.getElementById('root')
