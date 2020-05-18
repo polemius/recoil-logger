@@ -1,9 +1,9 @@
 const formatNumber = (number) => {
-    if (number <= 9) {
-        return `0${number}`
-    } 
+  if (number <= 9) {
+    return `0${number}`
+  }
 
-    return number
+  return number
 }
 
 export const formatTime = (time) => {
@@ -11,5 +11,5 @@ export const formatTime = (time) => {
   const m = formatNumber(time.getMinutes())
   const s = formatNumber(time.getSeconds())
   const ms = formatNumber(time.getMilliseconds())
-  return `${h}:${m}:${s}.${ms}`;
-};
+  return `${h}:${m}:${s}.${ms}`
+}
