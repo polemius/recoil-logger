@@ -1,6 +1,6 @@
 {
   "name": "recoil-logger",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Logger for recoil state manager",
   "main": "index.js",
   "repository": "git@polemius.github.com:polemius/recoil-logger.git",
