@@ -1,6 +1,8 @@
 # Recoil-logger
 
-Logger for state manager [recoil](https://recoiljs.org)
+Logger for state manager [recoil](https://recoiljs.org).
+
+[Demo](https://recoil-demo-logger.polemius.dev/)
 
 ![Example of logs in browser's conosle](example.gif)
 
