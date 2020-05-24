@@ -1,28 +1,59 @@
 import { formatTime } from './utils'
 import { useTransactionObservation_UNSTABLE } from 'recoil'
 
+const generateColors = (isDark = true) => {
+  const colors = {
+    error: 'color: ',
+    info: 'color: ',
+    previous: 'color: ',
+    base: 'color: ',
+  }
+  if (isDark) {
+    colors.error += '#ef6e70'
+    colors.info += '#9bceff'
+    colors.previous += '#d4d4d4'
+    colors.base += '#fff'
+  } else {
+    colors.error += '#c41518'
+    colors.info += '#2d02cc'
+    colors.previous += '#444'
+    colors.base += '#000'
+  }
+  return colors
+}
+
+const setColors = () => {
+  const isDark =
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+
+  return generateColors(isDark)
+}
+
 const logAction = (action) => {
+  const colors = setColors()
+
   console.groupCollapsed(
     '%c%s  %s  %s',
-    'color: #000',
+    colors.base,
     formatTime(new Date()),
     'Atom name',
     action.name,
   )
   if (action.persistence) {
-    console.log('%cValue of atom cannot be read', 'color: #f00')
+    console.log('%cValue of atom cannot be read', colors.error)
     console.log(
-      '%cPlease add: %c`persistence_UNSTABLE: { type: "log" }` %cto atom object to see the values',
-      'color: #333',
-      'color: #000',
+      '%cPlease add: %c`persistence_UNSTABLE: { type: "log" }` %cto see the values for atom object: ',
+      colors.base,
+      colors.info,
+      colors.base,
       action.name,
-      'color: #333',
     )
   } else {
-    console.log('%cAtom value %o', 'color: #444', action.atomValue)
+    console.log('%cAtom value %o', colors.base, action.atomValue)
     console.log(
       '%cPrevious atom value %o',
-      'color: #444',
+      colors.previous,
       action.previousAtomValue,
     )
   }
