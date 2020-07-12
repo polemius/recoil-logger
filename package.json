@@ -22,18 +22,18 @@
     "start": "parcel serve --cache-dir test/demo/.cache -d test/demo/dist test/demo/index.html --open"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-react": "^7.10.1",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
     "clean-publish": "^1.1.7",
-    "eslint": "^7.2.0",
+    "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react": "^7.20.3",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "recoil": "^0.0.9"
+    "recoil": "^0.0.10"
   }
 }
